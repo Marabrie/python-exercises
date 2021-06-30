@@ -15,7 +15,7 @@ In your implementation, there will be one human player and one computer player. 
 
 import random 
 
-score = 0 
+'''score = 0 
 maxscore = 100
 
 def main():
@@ -45,15 +45,22 @@ class Player:
     def human_move(self):
         score = 0
     def computer_move(self):
-        score = 0
+        score = 0'''
+        
+        
 class Die:
     
-    def__init__(self,n=6)
+    def __init__(self,n=6):
         self.sides=n
-        self.roll()
-        
+            
     def roll(self):
-        self.die_face
+        return random.randint(1,self.sides)
+
+die = Die() 
+
+print(die.roll())
+
+
         
 '''def playgame(): 
     while (player1_score < 100 and player2_score < 100):
@@ -63,25 +70,25 @@ class Die:
         
         
         
-        '''player1dice=random.randrange(1,6)
-        Player1 = player1dice
-        print("Player 1 dice 1 =",player1dice)
-        print("Does player 1 want to roll or hold?")
-        choose1 = input("Enter y for yes or n for no.")
-        if(choose1=="n"):
-            print("Player 1 dice 1 =",player1dice)
-            print("Player 1 dice 2 =",player1dice2)
-            print("Player 1 dice total =",Player1)
-            print("Does player 1 want to hold?")
-            choose1 = input("Enter y for yes or n for no.")
-        elif(choose1=="y"):
+        # player1dice=random.randrange(1,6)
+        # Player1 = player1dice
+        # print("Player 1 dice 1 =",player1dice)
+        # print("Does player 1 want to roll or hold?")
+        # choose1 = input("Enter y for yes or n for no.")
+        # if(choose1=="n"):
+        #     print("Player 1 dice 1 =",player1dice)
+        #     print("Player 1 dice 2 =",player1dice2)
+        #     print("Player 1 dice total =",Player1)
+        #     print("Does player 1 want to hold?")
+        #     choose1 = input("Enter y for yes or n for no.")
+        # elif(choose1=="y"):
 
-            print("It's player 2's turn.")
-            print("Player 2 dice 2 =",player2dice)
-            print("Player 2 dice 2 =",player2dice2)
-            print("Player 2 dice total =",Player2)
-            print("Does player 2 want to hold?")
-            choose2 = input("Enter y for yes or n for no.")'''
+        #     print("It's player 2's turn.")
+        #     print("Player 2 dice 2 =",player2dice)
+        #     print("Player 2 dice 2 =",player2dice2)
+        #     print("Player 2 dice total =",Player2)
+        #     print("Does player 2 want to hold?")
+        #     choose2 = input("Enter y for yes or n for no.")'''
  
         
 
@@ -89,7 +96,7 @@ class Die:
 
 
 
-def end_of_game():
-    print("Thank you for playing the Momentum Pig Game!")
+# def end_of_game():
+#     print("Thank you for playing the Momentum Pig Game!")
     
-main()
+# main()
