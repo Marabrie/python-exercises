@@ -1,5 +1,5 @@
 '''Two players are trying to reach 100 points first.
-On a player's turn, they roll a die over and over until they roll a 1 (a "pig") or they choose to hold.
+
 If they hold, they add the sum of their rolls to their score. If they roll a 1, they get no points.
 After a 1 is rolled or the player holds, the other player takes their turn.
 The first player is chosen randomly. (For example, you could flip a coin or both roll a die and pick the higher roll.)
@@ -13,6 +13,7 @@ In your implementation, there will be one human player and one computer player. 
 # Winning score = 100 points
 # Display the results, you win (player1, player2)
 
+from icecream import ic
 import random 
 
 maxscore = 100
@@ -30,12 +31,14 @@ def create_players():
         player2 = Player("human_player")
 
 
-class Player:
-#defines player1 which is human_player and Player2 which is computer_player  
-    def __init__(self, type):
-        self.type = type
-        self.score = 0
-    def 
+
+
+# class Player:
+# #defines player1 which is human_player and Player2 which is computer_player  
+#     def __init__(self, type):
+#         self.type = type
+#         self.score = 0
+#     def 
     
 class Die:
     
