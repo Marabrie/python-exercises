@@ -33,12 +33,12 @@ def create_players():
 
 
 
-# class Player:
-# #defines player1 which is human_player and Player2 which is computer_player  
-#     def __init__(self, type):
-#         self.type = type
-#         self.score = 0
-#     def 
+class Player:
+#defines player1 which is human_player and Player2 which is computer_player  
+    def __init__(self, type):
+        self.type = type
+        self.score = 0
+
     
 class Die:
     
@@ -48,42 +48,37 @@ class Die:
     def roll(self):
         return random.randint(1,self.sides)
 
-die = Die() 
 
-print(die.roll())
 
 class Game():
     def __init__(self):
         self.winner = None
-        self.player1 = "human_player"
-        self.player2 = "computer_player"
-        self. die = (6)
-        self.die.roll(self.player1, self.player2)
+        self.player1 = Player("human_player")
+        self.player2 = Player("computer_player")
+        self.die = Die()
         
-    def playgame(self): 
-        while self.total_score(self.human_player) <= 100:
-            self.roll(self.human_player) 
-            print("")
-            for die in self.computer_player:
-                print(die)
-            print(self.total_score(self.computer_player))
-            
-        player_choice = None
-        while player_choice != 'R':
+        
+    def playgame(self):
+        player_choice = None 
+        while self.player1.score <= 100 and player_choice != "H":
             player_choice = input ("Would you like to roll(R) or hold (H)? ")
             if player_choice == 'R':
-                self.roll(self.player)
-            else:
-                break
-        def roll( self, player):
-            player.roll.append(self.die.roll.pop())
+                roll = self.die.roll()
+                self.player1.score += roll
+                ic(roll)
+            ic(self.player1.score)
+            
+            print("")
+            
         
-        def total_score(self,player):
-            total = 0
-            for die in player.hand:
-                
-                total += 6
-
+        while self.player2.score <= 100:
+            roll = self.die.roll()
+            ic(roll, self.player2.score) 
+            print("")
+            self.player2.score += roll
+            
+        
+        
 #  #human vs computer moves
 # # #create while loops 
 #     def human_move(self):
@@ -111,5 +106,8 @@ def end_of_game():
 def main():
     greeting()
     end_of_game()
+    new_game=Game()
+    new_game.playgame()
+    
     
 main()
