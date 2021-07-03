@@ -15,39 +15,28 @@ In your implementation, there will be one human player and one computer player. 
 
 import random 
 
-'''score = 0 
 maxscore = 100
 
-def main():
-    greeting()
-    game=PIG()
-    game.play()
-    end_of_game()
-    
- 
 def greeting(): 
-    print("Welcome to the Momentum Pig Game?") 
+    print("Welcome to the Momentum Pig Game!") 
 
 #the first player is chosen randomly
-player = ["human_player", "computer_player"]
-print(random.choice(player))
-    
+def create_players():
+    player_types = ["human_player", "computer_player"]
+    player1 = Player(random.choice(player_types))
+    if player1.type == "human_player":
+        player2 = Player("computer_player")
+    else:
+        player2 = Player("human_player")
+
+
 class Player:
 #defines player1 which is human_player and Player2 which is computer_player  
-    def__init__(self,title, human_player = False):
-        self.name=title
-        self.is_human = human_player
+    def __init__(self, type):
+        self.type = type
         self.score = 0
-        self.die = Die(6)
-
-   #human vs computer moves
-   #create while loops 
-    def human_move(self):
-        score = 0
-    def computer_move(self):
-        score = 0'''
-        
-        
+    def 
+    
 class Die:
     
     def __init__(self,n=6):
@@ -60,43 +49,64 @@ die = Die()
 
 print(die.roll())
 
-
+class Game():
+    def __init__(self):
+        self.winner = None
+        self.player1 = "human_player"
+        self.player2 = "computer_player"
+        self. die = (6)
+        self.die.roll(self.player1, self.player2)
         
-'''def playgame(): 
-    while (player1_score < 100 and player2_score < 100):
-    player1_score = 0
-    player2_score = 0'''  
+    def playgame(self): 
+        while self.total_score(self.human_player) <= 100:
+            self.roll(self.human_player) 
+            print("")
+            for die in self.computer_player:
+                print(die)
+            print(self.total_score(self.computer_player))
+            
+        player_choice = None
+        while player_choice != 'R':
+            player_choice = input ("Would you like to roll(R) or hold (H)? ")
+            if player_choice == 'R':
+                self.roll(self.player)
+            else:
+                break
+        def roll( self, player):
+            player.roll.append(self.die.roll.pop())
         
-        
-        
-        
-        # player1dice=random.randrange(1,6)
-        # Player1 = player1dice
-        # print("Player 1 dice 1 =",player1dice)
-        # print("Does player 1 want to roll or hold?")
-        # choose1 = input("Enter y for yes or n for no.")
-        # if(choose1=="n"):
-        #     print("Player 1 dice 1 =",player1dice)
-        #     print("Player 1 dice 2 =",player1dice2)
-        #     print("Player 1 dice total =",Player1)
-        #     print("Does player 1 want to hold?")
-        #     choose1 = input("Enter y for yes or n for no.")
-        # elif(choose1=="y"):
+        def total_score(self,player):
+            total = 0
+            for die in player.hand:
+                
+                total += 6
 
-        #     print("It's player 2's turn.")
-        #     print("Player 2 dice 2 =",player2dice)
-        #     print("Player 2 dice 2 =",player2dice2)
-        #     print("Player 2 dice total =",Player2)
-        #     print("Does player 2 want to hold?")
-        #     choose2 = input("Enter y for yes or n for no.")'''
- 
-        
+#  #human vs computer moves
+# # #create while loops 
+#     def human_move(self):
+#         while
+#         score = 0
+#         def computer_move(self):
+# #         while 
+# #         score = 0
+                
+
+
+        # (player1_score < 100 and player2_score < 100):
+        #     player1_score = 0
+        #     player2_score = 0 
 
 
 
 
 
-# def end_of_game():
-#     print("Thank you for playing the Momentum Pig Game!")
+
+def end_of_game():
+    print("Thank you for playing the Momentum Pig Game!")
     
-# main()
+
+def main():
+    greeting()
+    end_of_game()
+    
+main()
